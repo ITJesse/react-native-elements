@@ -77,6 +77,7 @@ class FormInput extends Component {
       inputStyle,
       containerRef,
       normalizeFontSize,
+      testID,
       ...attributes
     } = this.props;
     const translateX = this.shakeAnimationValue.interpolate({
@@ -102,6 +103,7 @@ class FormInput extends Component {
             { fontSize: normalizeFontSize ? normalize(14) : 14 },
             inputStyle && inputStyle,
           ]}
+          accessibilityLabel={testID}
         />
       </Animated.View>
     );
